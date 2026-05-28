@@ -3,152 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Digibuks — Secure Authentication</title>
-  <!-- Fonts: Inter + Manrope -->
+  <title>Digibuks — Secure ITR Filing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Background shapes -->
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
   <!-- Page wrapper -->
   <div class="page">
-    <!-- Background shapes -->
-    <div class="bg-blobs" aria-hidden="true">
-      <span class="blob blob-1"></span>
-      <span class="blob blob-2"></span>
-      <span class="blob blob-3"></span>
-    </div>
-
     <!-- Split layout -->
-    <main class="split">
-      <!-- Left: Brand/Trust panel -->
-      <section class="panel panel-left" aria-labelledby="welcome-title">
-        <div class="brand">
-          <div class="brand-lockup">
-            <img class="brand-logo" src="assets/digibuks-logo.svg" alt="Digibuks logo" />
-            <div class="brand-name">Digibuks</div>
-          </div>
-          <span class="brand-badge">ITR SERVICES</span>
+    <main class="auth-layout">
+      <!-- Left: Branding + Feature Slider -->
+      <section class="auth-left" aria-label="Digibuks branding and features">
+        <!-- Logo and branding -->
+        <div class="branding-header">
+          <img class="logo" src="assets/digibuks-logo.svg" alt="Digibuks" />
+          <span class="brand-name">Digibuks</span>
         </div>
 
-        <div class="hero">
-          <p class="eyebrow">Trusted fintech platform</p>
-          <h1 id="welcome-title">Hassle-free ITR Filing, Expertly Done.</h1>
-          <p class="subtext">
-            File your Income Tax Return with confidence. Our experts ensure accuracy, compliance,
-            and maximum savings.
+        <!-- Hero text -->
+        <div class="hero-section">
+          <h1 class="hero-title">Hassle-free ITR Filing, Expertly Done.</h1>
+          <p class="hero-subtitle">
+            File your Income Tax Return with confidence. Our experts ensure accuracy, compliance, and maximum savings.
           </p>
         </div>
 
-        <div class="trust-list" aria-label="Trust indicators">
-          <div class="trust-pill">Secure &amp; Encrypted</div>
-          <div class="trust-pill">Expert Assisted Filing</div>
-          <div class="trust-pill">100% Confidential</div>
-        </div>
-
-        <!-- Illustration block -->
-        <div class="illustration" aria-hidden="true">
-          <div class="glass-card">
-            <div class="glass-row">
-              <span class="dot dot-green"></span>
-              <span class="label">Refund status</span>
-              <span class="value">Processed</span>
-            </div>
-            <div class="glass-row">
-              <span class="dot dot-green"></span>
-              <span class="label">Refund estimate</span>
-              <span class="value">₹2,85,000</span>
-            </div>
-            <div class="glass-row">
-              <span class="dot dot-dark"></span>
-              <span class="label">Review stage</span>
-              <span class="value">In progress</span>
-            </div>
+        <!-- Feature Slider -->
+        <div class="feature-slider" aria-label="Digibuks features">
+          <div class="slider-container" data-slider>
+            <article class="feature-card is-active" data-slide>
+              <div class="feature-icon">📋</div>
+              <h3 class="feature-title">Expert Assisted Filing</h3>
+              <p class="feature-description">CA-backed tax filing support for salary, business, freelancers and capital gains.</p>
+            </article>
+            <article class="feature-card" data-slide>
+              <div class="feature-icon">📈</div>
+              <h3 class="feature-title">Maximize Your Tax Savings</h3>
+              <p class="feature-description">Smart tax computation and deduction optimization tailored to your profile.</p>
+            </article>
+            <article class="feature-card" data-slide>
+              <div class="feature-icon">🔒</div>
+              <h3 class="feature-title">Bank-Grade Security</h3>
+              <p class="feature-description">Your financial data remains encrypted, protected and completely confidential.</p>
+            </article>
+            <article class="feature-card" data-slide>
+              <div class="feature-icon">⚡</div>
+              <h3 class="feature-title">Quick & Hassle-Free</h3>
+              <p class="feature-description">Upload documents and get your ITR processed with minimal effort.</p>
+            </article>
           </div>
-          <div class="float-chip">AES‑256 encryption</div>
-          <div class="float-chip secondary">Verified CA review</div>
+
+          <!-- Slider controls -->
+          <div class="slider-nav">
+            <button class="nav-dot is-active" type="button" role="tab" aria-selected="true" data-index="0" aria-label="Slide 1: Expert Assisted Filing"></button>
+            <button class="nav-dot" type="button" role="tab" aria-selected="false" data-index="1" aria-label="Slide 2: Maximize Savings"></button>
+            <button class="nav-dot" type="button" role="tab" aria-selected="false" data-index="2" aria-label="Slide 3: Bank-Grade Security"></button>
+            <button class="nav-dot" type="button" role="tab" aria-selected="false" data-index="3" aria-label="Slide 4: Quick & Hassle-Free"></button>
+          </div>
         </div>
       </section>
 
-      <!-- Right: Authentication card -->
-      <section class="panel panel-right" aria-labelledby="auth-title">
+      <!-- Right: Authentication Form -->
+      <section class="auth-right" aria-labelledby="auth-heading">
         <div class="auth-card">
           <div class="auth-header">
-            <h2 id="auth-title">Create your Digibuks account</h2>
+            <h2 id="auth-heading">Create your Digibuks account</h2>
             <p>Start your secure ITR filing in minutes.</p>
           </div>
 
-          <div class="info-slider" aria-label="Digibuks highlights">
-            <div class="slides" data-slider>
-              <article class="slide is-active" data-slide>
-                <div class="slide-title">Trusted by Thousands</div>
-                <p>Join thousands of taxpayers filing securely with Digibuks.</p>
-              </article>
-              <article class="slide" data-slide>
-                <div class="slide-title">Expert Assisted Filing</div>
-                <p>CA‑backed filing support for salary, business and capital gains.</p>
-              </article>
-              <article class="slide" data-slide>
-                <div class="slide-title">Fast &amp; Secure</div>
-                <p>Your data is encrypted and protected with enterprise‑grade security.</p>
-              </article>
-              <article class="slide" data-slide>
-                <div class="slide-title">Maximum Tax Savings</div>
-                <p>Smart tax computations to help maximize deductions and refunds.</p>
-              </article>
-            </div>
-            <div class="slider-controls">
-              <button class="slider-btn" type="button" aria-label="Previous" data-prev>‹</button>
-              <div class="slider-dots" role="tablist" aria-label="Slide navigation">
-                <button class="dot is-active" type="button" role="tab" aria-selected="true" data-dot="0"></button>
-                <button class="dot" type="button" role="tab" aria-selected="false" data-dot="1"></button>
-                <button class="dot" type="button" role="tab" aria-selected="false" data-dot="2"></button>
-                <button class="dot" type="button" role="tab" aria-selected="false" data-dot="3"></button>
-              </div>
-              <button class="slider-btn" type="button" aria-label="Next" data-next>›</button>
-            </div>
-          </div>
-
           <form class="auth-form" action="#" method="post">
-            <div class="field-row">
-              <div class="field">
+            <div class="form-row">
+              <div class="form-field">
                 <label for="first-name">First Name</label>
-                <input id="first-name" name="first-name" type="text" autocomplete="given-name" placeholder="Aarav" required />
+                <input id="first-name" type="text" name="first-name" autocomplete="given-name" placeholder="Aarav" required />
               </div>
-              <div class="field">
+              <div class="form-field">
                 <label for="last-name">Last Name</label>
-                <input id="last-name" name="last-name" type="text" autocomplete="family-name" placeholder="Sharma" required />
+                <input id="last-name" type="text" name="last-name" autocomplete="family-name" placeholder="Sharma" required />
               </div>
             </div>
 
-            <div class="field">
+            <div class="form-field">
               <label for="mobile">Mobile</label>
-              <input id="mobile" name="mobile" type="tel" autocomplete="tel" placeholder="+91 98765 43210" required />
+              <input id="mobile" type="tel" name="mobile" autocomplete="tel" placeholder="+91 98765 43210" required />
             </div>
 
-            <div class="field">
+            <div class="form-field">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@domain.com" required />
+              <input id="email" type="email" name="email" autocomplete="email" placeholder="you@domain.com" required />
             </div>
 
-            <div class="field">
+            <div class="form-field">
               <label for="password">Password</label>
-              <input id="password" name="password" type="password" autocomplete="new-password" placeholder="Create a strong password" required />
+              <input id="password" type="password" name="password" autocomplete="new-password" placeholder="Create a strong password" required />
             </div>
 
-            <label class="checkbox">
+            <label class="checkbox-label">
               <input type="checkbox" name="terms" required />
               <span>I agree to the Terms of Service and Privacy Policy</span>
             </label>
 
-            <button class="btn-primary" type="submit">Continue</button>
-            <button class="btn-primary is-loading" type="button" disabled aria-busy="true">Processing</button>
+            <button class="btn-primary" type="submit">Create Account</button>
 
-            <div class="divider">
+            <div class="form-divider">
               <span>Already have an account?</span>
             </div>
-            <a class="text-link" href="#">Sign in to Digibuks</a>
+
+            <a class="link-signin" href="#">Sign in to Digibuks</a>
           </form>
 
           <div class="auth-footer">
@@ -159,6 +129,7 @@
       </section>
     </main>
   </div>
+
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

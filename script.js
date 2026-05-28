@@ -1,10 +1,8 @@
 (() => {
   const slider = document.querySelector("[data-slider]");
   const slides = Array.from(document.querySelectorAll("[data-slide]"));
-  const dots = Array.from(document.querySelectorAll("[data-dot]"));
-  const prevBtn = document.querySelector("[data-prev]");
-  const nextBtn = document.querySelector("[data-next]");
-  const container = document.querySelector(".info-slider");
+  const dots = Array.from(document.querySelectorAll("[data-index]"));
+  const container = document.querySelector(".feature-slider");
 
   if (!slider || slides.length === 0) return;
 
@@ -35,19 +33,9 @@
     }
   };
 
-  prevBtn?.addEventListener("click", () => {
-    setActive(index - 1);
-    play();
-  });
-
-  nextBtn?.addEventListener("click", () => {
-    setActive(index + 1);
-    play();
-  });
-
   dots.forEach((dot) => {
     dot.addEventListener("click", () => {
-      const target = Number(dot.getAttribute("data-dot"));
+      const target = Number(dot.getAttribute("data-index"));
       setActive(target);
       play();
     });

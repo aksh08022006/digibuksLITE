@@ -143,13 +143,95 @@ a:hover{
 
 <body>
 
-<!-- SVG BACKGROUND START -->
-<div class="fintech-bg" aria-hidden="true">
+ <!-- SVG Background -->
+  <div class="fintech-bg" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+      <rect width="1440" height="900" fill="#EFF8EF"/>
 
-    <!-- PASTE COMPLETE SVG HERE -->
+      <!-- TOP-LEFT network graph — reduced opacity -->
+      <g opacity="0.22" stroke="#7fa880" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="72" y1="175" x2="185" y2="235" stroke-width="1"/>
+        <line x1="185" y1="235" x2="268" y2="180" stroke-width="1"/>
+        <line x1="72" y1="175" x2="130" y2="90" stroke-width="1"/>
+        <line x1="130" y1="90" x2="268" y2="180" stroke-width="1"/>
+        <line x1="185" y1="235" x2="220" y2="310" stroke-width="1"/>
+        <line x1="268" y1="180" x2="340" y2="240" stroke-width="1"/>
+        <line x1="220" y1="310" x2="340" y2="240" stroke-width="1"/>
+        <line x1="340" y1="240" x2="380" y2="160" stroke-width="1"/>
+        <line x1="72" y1="175" x2="28" y2="255" stroke-width="1"/>
+        <line x1="28" y1="255" x2="100" y2="320" stroke-width="1"/>
+        <line x1="100" y1="320" x2="220" y2="310" stroke-width="1"/>
+        <circle cx="185" cy="235" r="16" stroke-width="1" fill="none" opacity="0.28"/>
+        <circle cx="185" cy="235" r="9" fill="#9eb8a0" stroke="none"/>
+        <circle cx="72" cy="175" r="5" fill="#9eb8a0" stroke="none"/>
+        <circle cx="130" cy="90" r="4" fill="#9eb8a0" stroke="none"/>
+        <circle cx="268" cy="180" r="5" fill="#9eb8a0" stroke="none"/>
+        <circle cx="220" cy="310" r="4.5" fill="#9eb8a0" stroke="none"/>
+        <circle cx="340" cy="240" r="5" fill="#9eb8a0" stroke="none"/>
+        <circle cx="380" cy="160" r="3.5" fill="#9eb8a0" stroke="none"/>
+        <circle cx="28" cy="255" r="4" fill="#9eb8a0" stroke="none"/>
+        <circle cx="100" cy="320" r="4" fill="#9eb8a0" stroke="none"/>
+      </g>
 
-</div>
-<!-- SVG BACKGROUND END -->
+      <text x="46" y="80" font-family="system-ui,sans-serif" font-size="72" font-weight="300" fill="#7fa880" opacity="0.10">₹</text>
+
+      <!-- TOP-RIGHT waves -->
+      <g opacity="0.15" stroke="#7fa880" stroke-linecap="round" fill="none">
+        <path d="M1200,20 C1260,80 1300,160 1340,120 C1380,80 1400,200 1440,180" stroke-width="1.5"/>
+        <path d="M1260,60 C1300,130 1330,90 1380,150 C1410,190 1430,240 1440,260" stroke-width="1"/>
+        <path d="M1350,0 C1390,60 1420,30 1440,80" stroke-width="0.8" opacity="0.5"/>
+        <circle cx="1260" cy="60" r="4" fill="#9eb8a0" stroke="none"/>
+        <circle cx="1340" cy="120" r="4" fill="#9eb8a0" stroke="none"/>
+        <circle cx="1380" cy="150" r="3" fill="#9eb8a0" stroke="none"/>
+      </g>
+      <text x="1390" y="68" font-family="system-ui,sans-serif" font-size="44" font-weight="300" fill="#7fa880" opacity="0.07">₹</text>
+
+      <!-- BOTTOM-LEFT arcs -->
+      <g opacity="0.14" stroke="#7fa880" stroke-linecap="round" fill="none">
+        <path d="M-20,820 C60,720 160,780 240,700 C320,620 360,660 440,580" stroke-width="1.5"/>
+        <path d="M0,880 C80,820 180,860 300,800 C400,750 460,790 540,740" stroke-width="1" opacity="0.6"/>
+        <circle cx="240" cy="700" r="4" fill="#9eb8a0" stroke="none"/>
+        <circle cx="440" cy="580" r="3.5" fill="#9eb8a0" stroke="none"/>
+      </g>
+
+      <!-- BOTTOM chart -->
+      <g opacity="0.16" stroke="#7fa880" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <polyline points="510,820 560,770 610,800 660,730 720,760 780,700 840,740 900,670" stroke-width="1.5"/>
+        <circle cx="510" cy="820" r="3.5" fill="#9eb8a0" stroke="none"/>
+        <circle cx="660" cy="730" r="3.5" fill="#9eb8a0" stroke="none"/>
+        <circle cx="780" cy="700" r="3.5" fill="#9eb8a0" stroke="none"/>
+        <circle cx="900" cy="670" r="3.5" fill="#9eb8a0" stroke="none"/>
+      </g>
+
+      <text x="596" y="670" font-family="system-ui,sans-serif" font-size="60" font-weight="300" fill="#7fa880" opacity="0.10">$</text>
+      <text x="1010" y="700" font-family="system-ui,sans-serif" font-size="70" font-weight="300" fill="#7fa880" opacity="0.10">₹</text>
+
+      <!-- ITR document -->
+      <g transform="translate(1310,700)" opacity="0.14">
+        <path d="M0,0 L90,0 L120,32 L120,160 L0,160 Z" fill="none" stroke="#7fa880" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M90,0 L90,32 L120,32" fill="none" stroke="#7fa880" stroke-width="1.8" stroke-linejoin="round"/>
+        <line x1="18" y1="60" x2="90" y2="60" stroke="#7fa880" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="18" y1="80" x2="102" y2="80" stroke="#7fa880" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="18" y1="100" x2="80" y2="100" stroke="#7fa880" stroke-width="1.2" stroke-linecap="round"/>
+        <text x="14" y="142" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="#7fa880" letter-spacing="3">ITR</text>
+      </g>
+
+      <!-- BOTTOM-RIGHT network -->
+      <g opacity="0.14" stroke="#7fa880" stroke-linecap="round" fill="none">
+        <line x1="1100" y1="560" x2="1180" y2="620" stroke-width="1"/>
+        <line x1="1180" y1="620" x2="1260" y2="570" stroke-width="1"/>
+        <line x1="1260" y1="570" x2="1340" y2="630" stroke-width="1"/>
+        <line x1="1340" y1="630" x2="1390" y2="560" stroke-width="1"/>
+        <circle cx="1100" cy="560" r="3.5" fill="#9eb8a0" stroke="none"/>
+        <circle cx="1180" cy="620" r="4" fill="#9eb8a0" stroke="none"/>
+        <circle cx="1260" cy="570" r="3.5" fill="#9eb8a0" stroke="none"/>
+        <circle cx="1340" cy="630" r="4" fill="#9eb8a0" stroke="none"/>
+        <circle cx="1390" cy="560" r="3" fill="#9eb8a0" stroke="none"/>
+      </g>
+    </svg>
+  </div>
+  <!-- end background -->
+
 
 <div class="page">
 

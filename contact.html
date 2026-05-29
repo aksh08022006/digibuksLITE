@@ -8,7 +8,12 @@
 <style>
 :root{--green:#39b54a;--green-dark:#277a34;--bg:#EFF8EF;--card:rgba(255,255,255,.92);--border:#dce8dc}
 body{font-family:Poppins,sans-serif;background:var(--bg);margin:0;padding:40px 20px;color:#111318}
-.container{max-width:1200px;margin:auto}
+.container{
+    max-width:1200px;
+    margin:auto;
+    position:relative;
+    z-index:1;
+}
 .header{text-align:center;margin-bottom:40px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .card{background:var(--card);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:24px;padding:32px;box-shadow:0 28px 64px rgba(0,0,0,.08)}
@@ -37,7 +42,11 @@ a{color:var(--green-dark)}
       height: 100%;
       display: block;
     }
-
+   .page{
+    position:relative;
+    z-index:1;
+    min-height:100vh;
+}
 @media(max-width:900px){.grid{grid-template-columns:1fr}}
 </style>
 </head>

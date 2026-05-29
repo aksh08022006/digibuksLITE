@@ -1,0 +1,14 @@
+python3 -c "
+import re
+with open('/mnt/user-data/uploads/digibuks-refined__1_.html','r') as f:
+    content = f.read()
+# Extract the logo src value
+m = re.search(r'src=\"(data:image/svg\+xml;base64,[^\"]+)\"', content)
+if m:
+    logo = m.group(1)
+    print(f'Logo length: {len(logo)}')
+    # Save logo to file
+    with open('/tmp/logo_data.txt','w') as lf:
+        lf.write(logo)
+    print('Saved to /tmp/logo_data.txt')
+"

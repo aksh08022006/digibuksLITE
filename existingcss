@@ -1,0 +1,18 @@
+python3 << 'PYEOF'
+with open('/mnt/user-data/uploads/digibuks-refined__1_.html','r') as f:
+    original = f.read()
+with open('/tmp/logo_data.txt','r') as f:
+    logo_data = f.read().strip()
+
+# Extract just the CSS from the original 
+css_start = original.find('<style>')
+css_end = original.find('</style>') + len('</style>')
+existing_css = original[css_start:css_end]
+print("Existing CSS length:", len(existing_css))
+
+# Extract SVG background (full section)
+svg_bg_raw_start = original.find('  <div class="fintech-bg"')
+svg_bg_raw_end = original.find('  <!-- end background -->') + len('  <!-- end background -->')
+svg_bg_section = original[svg_bg_raw_start:svg_bg_raw_end]
+print("SVG bg section:", len(svg_bg_section))
+PYEOF

@@ -1,0 +1,10 @@
+left_start = original.find('      <!-- Left panel -->')
+left_end = original.find('      <!-- Right panel: Auth card -->')
+with open('/tmp/left_panel.txt','w') as f:
+    f.write(original[left_start:left_end])
+
+left panelleft_start = original.find('      <!-- Left panel -->')
+left_end = original.find('      <!-- Right panel: Auth card -->')
+with open('/tmp/left_panel.txt','w') as f:
+    f.write(original[left_start:left_end])
+

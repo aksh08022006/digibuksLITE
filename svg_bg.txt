@@ -1,0 +1,26 @@
+python3 -c "
+with open('/mnt/user-data/uploads/digibuks-refined__1_.html','r') as f:
+    content = f.read()
+
+# Extract SVG background section
+svg_start = content.find('<div class=\"fintech-bg\"')
+svg_end = content.find('<!-- end background -->')
+svg_section = content[svg_start:svg_end + len('<!-- end background -->')]
+print(f'SVG section length: {len(svg_section)}')
+
+# Extract script section
+script_start = content.find('<script>')
+script_end = content.rfind('</script>') + len('</script>')
+script_section = content[script_start:script_end]
+print(f'Script section length: {len(script_section)}')
+print('Script preview:', script_section[:200])
+"
+Output
+
+SVG section length: 5654
+Script section length: 1110
+Script preview: <script>
+    (() => {
+      const slides    = Array.from(document.querySelectorAll("[data-slide]"));
+      const imgSlides = Array.from(document.querySelectorAll("[data-img-slide]"));
+      const dots

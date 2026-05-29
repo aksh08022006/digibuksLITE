@@ -48,9 +48,14 @@ a {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 10% 10%, rgba(57, 181, 74, 0.08), transparent 45%),
-              radial-gradient(circle at 90% 20%, rgba(57, 181, 74, 0.05), transparent 40%),
-              linear-gradient(180deg, #ffffff 0%, #f9fbfa 100%);
+  background-image:
+    linear-gradient(rgba(57, 181, 74, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 181, 74, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 10% 10%, rgba(57, 181, 74, 0.08), transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(57, 181, 74, 0.05), transparent 40%),
+    linear-gradient(180deg, #ffffff 0%, #f9fbfa 100%);
+  background-size: 56px 56px, 56px 56px, auto, auto, auto;
+  background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat;
 }
 
 /* Background blobs */

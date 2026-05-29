@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talk to a Tax Expert - Digibuks</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#39b54a;--green-dark:#277a34;--bg:#EFF8EF;--card:rgba(255,255,255,.92);--border:#dce8dc}
+body{font-family:Poppins,sans-serif;background:var(--bg);margin:0;padding:40px 20px;color:#111318}
+.container{max-width:1200px;margin:auto}
+.header{text-align:center;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.card{background:var(--card);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:24px;padding:32px;box-shadow:0 28px 64px rgba(0,0,0,.08)}
+form{display:grid;gap:16px}
+input,textarea{padding:14px;border:1px solid var(--border);border-radius:12px;font-family:inherit}
+textarea{min-height:140px}
+button{background:linear-gradient(135deg,#3dc451,#2b9a3c);color:white;border:none;padding:14px;border-radius:999px;font-weight:600;cursor:pointer}
+.success{display:none;text-align:center}
+a{color:var(--green-dark)}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>Connect With Digibuks Today</h1>
+<p>We respect your time and strive to deliver prompt solutions. Join the thousands of professionals and organizations who rely on Digibuks for smooth financial management.</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h2>Let's Talk</h2>
+<p><a href="mailto:info@digibuks.com">info@digibuks.com</a></p>
+<p><a href="tel:+919888341441">+91 9888 341 441</a></p>
+
+<h2>WhatsApp</h2>
+<p><a href="https://wa.me/919888341441">+91 9888341441</a></p>
+
+<h2>You Can Reach Us</h2>
+<p>Monday to Friday, from 10 AM to 6 PM</p>
+
+<h2>Our Offices</h2>
+<p><strong>Mumbai (Registered Branch)</strong><br>
+Digibuks LLP<br>
+A1102, Raheja Solitaire<br>
+Goregaon West, Mumbai – 400104</p>
+
+<p><strong>Noida</strong><br>
+B-117, Logix Technova<br>
+Sector-132, Noida (U.P.) – 201304</p>
+</div>
+
+<div class="card">
+<form id="contactForm">
+<input required placeholder="Full Name">
+<input required type="email" placeholder="Email Address">
+<input required placeholder="Phone Number">
+<input placeholder="Address">
+<textarea required placeholder="Query / Message"></textarea>
+<button type="submit">Talk to a Tax Expert</button>
+</form>
+<div class="success" id="success">
+<h3>Thank you for contacting Digibuks. Our team will get back to you shortly.</h3>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit',function(e){
+e.preventDefault();
+this.style.display='none';
+document.getElementById('success').style.display='block';
+});
+</script>
+</body>
+</html>
